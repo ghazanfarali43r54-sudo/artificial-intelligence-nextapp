@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TechStack() {
   return (
-    <section className="relative w-full max-w-[1728px] mx-auto bg-white overflow-hidden py-16 lg:py-20" style={{ borderBottomWidth: "0.5px", borderImage: "repeating-linear-gradient(to right, #AF00E8 0 12px, transparent 12px 20px) 1" }}>
+    <section id="tech-stack" className="relative w-full max-w-[1728px] mx-auto bg-white overflow-hidden py-16 lg:py-20" style={{ borderBottomWidth: "0.5px", borderImage: "repeating-linear-gradient(to right, #AF00E8 0 12px, transparent 12px 20px) 1" }}>
       <h2
         className="hidden lg:block absolute inset-x-0 text-center font-bold whitespace-nowrap select-none pointer-events-none z-0 text-gray-50"
         style={{

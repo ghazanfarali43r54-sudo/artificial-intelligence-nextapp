@@ -92,7 +92,7 @@ function StatItem({ stat }) {
 
 export default function ProvenTrackRecord() {
   return (
-    <section className="relative w-full max-w-[1728px] mx-auto bg-white overflow-hidden px-6 py-16 lg:py-24">
+    <section id="proven-track" className="relative w-full max-w-[1728px] mx-auto bg-white overflow-hidden px-6 py-16 lg:py-24">
       {/* Background watermark box */}
       <div
         className="hidden lg:block absolute pointer-events-none select-none"

@@ -102,16 +102,18 @@ function StatItem({ stat }) {
   useEffect(() => {
     if (!node) return;
     if (typeof IntersectionObserver === "undefined") {
-      setInView(true);
-      return;
+      const rafFallback = requestAnimationFrame(() => setInView(true));
+      return () => cancelAnimationFrame(rafFallback);
     }
 
     const rect = node.getBoundingClientRect();
     const alreadyVisible = rect.top < window.innerHeight && rect.bottom > 0;
 
     if (alreadyVisible) {
-      setInView(true);
-      return;
+      // setState ko effect ke bahar (next frame mein) defer karo,
+      // warna cascading render warning aati hai
+      const raf = requestAnimationFrame(() => setInView(true));
+      return () => cancelAnimationFrame(raf);
     }
 
     observerRef.current = new IntersectionObserver(
@@ -147,7 +149,7 @@ function StatItem({ stat }) {
 const Explore = () => {
   return (
     <>
-      <section className="relative bg-[#faf9f7] pt-16 sm:pt-20 md:pt-24 pb-16 sm:pb-20 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 overflow-hidden border-t border-b border-[#9b1fe0]/30">
+      <section id="explore" className="relative bg-[#faf9f7] pt-16 sm:pt-20 md:pt-24 pb-16 sm:pb-20 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 overflow-hidden border-t border-b border-[#9b1fe0]/30">
         <div className="hidden sm:block absolute top-0 left-0 w-40 sm:w-44 md:w-50 h-40 sm:h-44 md:h-50 overflow-hidden pointer-events-none z-20">
           <div className="absolute top-[14px] left-[-40px] w-52 rotate-[-45deg] bg-[#A000DF] py-1.5 flex items-center justify-center gap-1.5">
             <RiGeminiFill className="text-white text-xs shrink-0" />

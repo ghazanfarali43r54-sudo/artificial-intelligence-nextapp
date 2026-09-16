@@ -28,7 +28,7 @@ const CASES = [
 
 const Proven = () => {
   return (
-    <section className="bg-[#242424] text-white py-20 px-6 md:px-16 lg:px-24">
+    <section id="proven" className="bg-[#242424] text-white py-20 px-6 md:px-16 lg:px-24">
       {/* HEADER */}
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-14">
         <h2 className="font-serif font-bold text-3xl md:text-4xl leading-snug max-w-3xl">

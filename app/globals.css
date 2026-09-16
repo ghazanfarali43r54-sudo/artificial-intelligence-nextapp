@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Navbar links click pe smooth scroll karke section tak le jate hain */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

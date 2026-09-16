@@ -30,7 +30,7 @@ const CASES = [
 
 const Article = () => {
   return (
-    <section className="bg-white text-black py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
+    <section id="article" className="bg-white text-black py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
       {/* HEADER */}
       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-10 sm:mb-14">
         <h2 className="font-serif font-bold text-2xl sm:text-3xl md:text-4xl leading-snug max-w-3xl">

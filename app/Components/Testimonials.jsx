@@ -116,7 +116,7 @@ function TestimonialCard({ c }) {
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full max-w-[1728px] mx-auto bg-white overflow-hidden py-16 lg:py-20 px-6 lg:px-[65px]">
+    <section id="testimonial" className="relative w-full max-w-[1728px] mx-auto bg-white overflow-hidden py-16 lg:py-20 px-6 lg:px-[65px]">
       {/* Background watermark text */}
       <h2
         className="hidden lg:block absolute inset-x-0 text-center font-bold uppercase whitespace-nowrap select-none pointer-events-none z-0"

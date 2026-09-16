@@ -4,25 +4,33 @@ import Link from "next/link";
 import { useState } from "react";
 import { logo } from "../assets";
 
+// Har link ka label + jis section pe jana hai uska anchor id
+// Ye ids homepage ke sections pe lagayi gayi hain (same page scroll)
 const navLinks = [
-  "Solutions",
-  "Services",
-  "Hire Us",
-  "Case Studies",
-  "FAQS",
-  "About Us",
-  "Contact Us",
-  "Testimonial",
-  "Blog",
+  { label: "Hero", target: "hero" },
+  { label: "ServicesStrip", target: "services-strip" },
+  { label: "ProvenTrack", target: "proven-track" },
+  { label: "Clients", target: "clients" },
+  { label: "TechStack", target: "tech-stack" },
+  { label: "proven", target: "proven" },
+  { label: "Explore", target: "explore" },
+  { label: "Testimonial", target: "testimonial" },
+  { label: "Article", target: "article" },
 ];
-
-const linkHref = (link) => `#${link.toLowerCase().replace(/\s+/g, "-")}`;
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(null);
+
+  // Click hone pe active link set karo aur mobile menu band kar do
+  const handleClick = (target) => {
+    setActive(target);
+    setOpen(false);
+  };
 
   return (
-<nav className="relative w-full max-w-[1728px] mx-auto min-h-[100px] lg:h-[100px] bg-white overflow-x-hidden">      <div className="flex items-center justify-between px-6 py-6 lg:hidden">
+    <nav className="relative w-full max-w-[1728px] mx-auto min-h-[100px] lg:h-[100px] bg-white overflow-x-hidden">
+      <div className="flex items-center justify-between px-6 py-6 lg:hidden">
         <Link href="/">
           <img src={logo} alt="Clickmasters logo" className="h-6 w-auto" />
         </Link>
@@ -36,7 +44,7 @@ export default function Navbar() {
             {open ? (
               <path d="M6 6l12 12M6 18L18 6" strokeLinecap="round" />
             ) : (
-              <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
+              <path d="M3 6h18M3 18h18" strokeLinecap="round" />
             )}
           </svg>
         </button>
@@ -44,14 +52,26 @@ export default function Navbar() {
 
       {open && (
         <div className="lg:hidden flex flex-col items-center gap-4 pb-6 px-6">
-          {navLinks.map((link) => (
-            <a key={link} href={linkHref(link)} className="text-sm text-gray-800 hover:text-purple-600 transition-colors">
-              {link}
+          {navLinks.map(({ label, target }) => (
+            <a
+              key={label}
+              href={`#${target}`}
+              onClick={() => handleClick(target)}
+              className={`text-sm transition-colors ${
+                active === target
+                  ? "text-purple-600 font-semibold"
+                  : "text-gray-800 hover:text-purple-600"
+              }`}
+            >
+              {label}
             </a>
           ))}
-          <a href="#signin" className="flex items-center justify-center w-[145px] h-[48px] px-5 py-3 rounded-md text-white text-sm font-medium bg-[#AF00E8] hover:opacity-90 transition-opacity">
+          <Link
+            href="/signin"
+            className="flex items-center justify-center w-[145px] h-[48px] px-5 py-3 rounded-md text-white text-sm font-medium bg-[#AF00E8] hover:opacity-90 transition-opacity"
+          >
             Sign In
-          </a>
+          </Link>
         </div>
       )}
 
@@ -61,18 +81,29 @@ export default function Navbar() {
         </Link>
 
         <ul className="flex flex-row justify-center items-center gap-6 flex-1">
-          {navLinks.map((link) => (
-            <li key={link}>
-              <a href={linkHref(link)} className="text-sm text-gray-800 hover:text-purple-600 transition-colors whitespace-nowrap">
-                {link}
+          {navLinks.map(({ label, target }) => (
+            <li key={label}>
+              <a
+                href={`#${target}`}
+                onClick={() => handleClick(target)}
+                className={`text-sm transition-colors whitespace-nowrap ${
+                  active === target
+                    ? "text-purple-600 font-semibold"
+                    : "text-gray-800 hover:text-purple-600"
+                }`}
+              >
+                {label}
               </a>
             </li>
           ))}
         </ul>
 
-        <a href="#signin" className="shrink-0 flex flex-row justify-center items-center gap-[10px] px-5 py-[13px] w-[145px] h-[48px] text-white text-sm font-medium bg-[#AF00E8] hover:opacity-90 transition-opacity">
+        <Link
+          href="/signin"
+          className="shrink-0 flex flex-row justify-center items-center gap-[10px] px-5 py-[13px] w-[145px] h-[48px] text-white text-sm font-medium bg-[#AF00E8] hover:opacity-90 transition-opacity"
+        >
           Sign In
-        </a>
+        </Link>
       </div>
     </nav>
   );

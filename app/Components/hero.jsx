@@ -13,7 +13,7 @@ import { GrPlayFill } from "react-icons/gr";
 
 export default function Hero() {
   return (
-    <section className="relative w-full max-w-[1728px] mx-auto overflow-hidden bg-white px-6 py-16 lg:px-0 lg:py-0 lg:h-[820px]">
+    <section id="hero" className="relative w-full max-w-[1728px] mx-auto overflow-hidden bg-white px-6 py-16 lg:px-0 lg:py-0 lg:h-[820px]">
       {/* Background giant watermark text (desktop only) */}
       <h2
         className="hidden lg:block absolute font-bold whitespace-nowrap select-none pointer-events-none z-0"
@@ -23,7 +23,7 @@ export default function Hero() {
           transform: "translateX(-50%)",
           top: "4vw",
           width: "97.11vw",
-          fontSize: "10.90vw",
+          fontSize: "12.80vw",
           lineHeight: "12.15vw",
           textAlign: "center",
           color: "rgba(175, 0, 232, 0.08)",
@@ -36,21 +36,21 @@ export default function Hero() {
       <div className="hidden lg:block absolute inset-0 z-10 pointer-events-none">
         <div
           className="absolute flex items-center justify-center bg-[#18181B] border border-black/5"
-          style={{ left: "7.30%", top: "8%", width: "3.24%", height: "6.83%", transform: "rotate(-60deg)" }}
+          style={{ left: "7.30%", top: "10%", width: "3.24%", height: "6.83%", transform: "rotate(-60deg)" }}
         >
           <GrPlayFill className="w-4 h-5 object-contain text-white"/>
         </div>
 
         <div
           className="absolute flex items-center justify-center bg-[#AF00E8]"
-          style={{ left: "40%", top: "20%", width: "3.24%", height: "6.83%", transform: "rotate(-17.73deg)" }}
+          style={{ left: "40.30%", top: "24%", width: "3.24%", height: "6.83%", transform: "rotate(-17.73deg)" }}
         >
           <RiGeminiFill className="w-4 h-5 object-contain text-white"/>
         </div>
 
         <div
           className="absolute flex items-center justify-center bg-[#FFE167]"
-          style={{ left: "83.70%", top: "10.20%", width: "3.24%", height: "6.83%", transform: "rotate(-15deg)" }}
+          style={{ left: "83.40%", top: "13.10%", width: "3.24%", height: "6.83%", transform: "rotate(-15deg)" }}
         >
           <span
             className="text-[#333333] text-[20px] leading-[28px]"
@@ -67,7 +67,7 @@ export default function Hero() {
         style={{
           backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 95%), url("${aiModelImg}")`,
           backgroundSize: "auto, contain",
-          backgroundPosition: "center 30px, center 115px",
+          backgroundPosition: "center 30px, left 525px top 140px",
           backgroundRepeat: "no-repeat, no-repeat",
         }}
       />
@@ -76,7 +76,7 @@ export default function Hero() {
       <img src={aiModelImg} alt="AI Model" className="lg:hidden w-full max-w-xs mx-auto mb-8 relative z-20" />
 
       {/* Left content block */}
-      <div className="relative z-30 flex flex-col items-center text-center gap-6 lg:items-start lg:text-left lg:absolute lg:left-[90px] lg:top-[310px] lg:w-[520px] lg:gap-6">
+      <div className="relative z-30 flex flex-col items-center text-center gap-6 lg:items-start lg:text-left lg:absolute lg:left-[160px] lg:top-[310px] lg:w-[520px] lg:gap-6">
         <h1
           className="font-bold text-3xl leading-tight lg:text-[58px] lg:leading-[66px]"
           style={{ fontFamily: "Garamond, serif", color: "#333333" }}

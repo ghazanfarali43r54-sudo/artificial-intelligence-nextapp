@@ -28,7 +28,7 @@ function MarqueeRow({ items, direction = "left", speed = 30 }) {
 
 export default function ClientsMarquee() {
   return (
-    <section className="relative w-full max-w-[1728px] mx-auto bg-[#0a0a0a] overflow-hidden py-14 sm:py-20 lg:py-24 flex flex-col gap-8 sm:gap-9 lg:gap-10">
+    <section id="clients" className="relative w-full max-w-[1728px] mx-auto bg-[#0a0a0a] overflow-hidden py-14 sm:py-20 lg:py-24 flex flex-col gap-8 sm:gap-9 lg:gap-10">
       <style>{`
         @keyframes scroll-left {
           from { transform: translateX(0); }
