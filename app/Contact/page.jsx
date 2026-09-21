@@ -1,5 +1,7 @@
 // app/Contact/page.jsx
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { logo } from "../assets";
 
 const consultationOptions = [
@@ -88,7 +90,80 @@ const complianceBadges = [
 
 const links = ["Support", "Blog", "Testimonials", "Careers", "About Us"];
 
+// FAQ accordion item: sparkle icon toggles to cross, answer slides down/up
+function FaqItem({ faq, isOpen, onToggle }) {
+  return (
+    <div className="group py-6 px-4 -mx-4 rounded-md transition-colors duration-200 hover:bg-white hover:shadow-md">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={isOpen}
+        className="w-full flex items-center justify-between gap-4 text-left cursor-pointer"
+      >
+        <h3
+          className={`font-serif text-lg font-semibold transition-colors ${
+            isOpen
+              ? "text-[#A000DF]"
+              : "text-gray-900 group-hover:text-[#A000DF]"
+          }`}
+        >
+          {faq.question}
+        </h3>
+
+        <span
+          className={`flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full border transition-all duration-300 bg-pink-50 ${
+            isOpen
+              ? "bg-[#A000DF] border-[#A000DF] text-white rotate-180"
+              : "border-gray-300 text-gray-500 group-hover:border-[#A000DF] group-hover:text-[#A000DF]"
+          }`}
+        >
+          {isOpen ? (
+            /* Cross (X) icon */
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 6l12 12M18 6L6 18"
+              />
+            </svg>
+          ) : (
+            /* Sparkle/star icon */
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2c0.5 4.5 2 7 6.5 8.5C14 12 12.5 14.5 12 19c-0.5-4.5-2-7-6.5-8.5C10 9 11.5 6.5 12 2z" />
+            </svg>
+          )}
+        </span>
+      </button>
+
+      {/* Answer: smooth slide down when open, slide up when closed */}
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${
+          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <p
+            className={`text-gray-500 text-sm leading-relaxed ${
+              isOpen ? "mt-2" : ""
+            }`}
+          >
+            {faq.answer}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Contact() {
+  const [openIndex, setOpenIndex] = useState(null);
+
   return (
     <>
       {/* Hero + Contact Form Section */}
@@ -250,7 +325,8 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 mb-12 leading-tight">
             Structured Consultation{" "}
-            <span className="italic text-[#A000DF]">Bypassing Project Limits</span>
+            <span className="italic text-[#A000DF]">Bypassing Project 
+              <br></br>Limits</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
@@ -262,8 +338,9 @@ export default function Contact() {
                 <p className="text-gray-500 text-sm leading-relaxed mb-4">
                   {option.description}
                 </p>
+
                 
-                <a  href="#"
+                <a href="#"
                   className="text-[#A000DF] text-sm font-medium hover:underline"
                 >
                   {option.linkText}
@@ -280,7 +357,9 @@ export default function Contact() {
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-14 leading-tight">
             Secure Datacenters And{" "}
             <span className="italic text-[#A000DF]">
-              International Support Labs
+              International
+              <br />
+              Support Labs
             </span>
           </h2>
 
@@ -317,17 +396,14 @@ export default function Contact() {
 
           <div className="divide-y divide-gray-200">
             {faqs.map((faq, index) => (
-              <div
+              <FaqItem
                 key={index}
-                className="group py-6 px-4 -mx-4 rounded-md transition-colors duration-200 hover:bg-white hover:shadow-md cursor-pointer"
-              >
-                <h3 className="font-serif text-lg font-semibold text-gray-900 group-hover:text-[#A000DF] transition-colors">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-500 text-sm mt-2 leading-relaxed">
-                  {faq.answer}
-                </p>
-              </div>
+                faq={faq}
+                isOpen={openIndex === index}
+                onToggle={() =>
+                  setOpenIndex(openIndex === index ? null : index)
+                }
+              />
             ))}
           </div>
 
@@ -353,7 +429,7 @@ export default function Contact() {
       {/* CTA Section */}
       <section className="bg-gray-50 py-24 px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-serif text-2xl md:text-4xl font-bold text-gray-900">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900">
             Ready To Transform Your{" "}
             <span className="italic text-[#A000DF]">Business?</span>
           </h2>
@@ -373,7 +449,6 @@ export default function Contact() {
 
       {/* Footer */}
       <footer className="relative w-full max-w-[1728px] mx-auto bg-white overflow-hidden lg:h-[687px] py-16 lg:py-0 px-6">
-    
         <div className="relative z-10 flex flex-col items-center gap-[60px] w-full lg:max-w-[1528px] lg:mx-auto lg:pt-[100.71px]">
           <img
             src={logo}
@@ -430,7 +505,7 @@ export default function Contact() {
               <div className="flex flex-wrap justify-center sm:justify-end items-center gap-[50px]">
                 {links.map((link) => (
                   
-                 <a   key={link}
+                <a    key={link}
                     href="#"
                     style={{
                       fontFamily: "Urbanist, sans-serif",

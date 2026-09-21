@@ -74,7 +74,7 @@ export default function Blogs() {
       {/* Hero / Featured Article Section */}
       <section className="bg-gray-50 py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
             Latest Articles, Guides And{" "}
             <span className="italic text-[#A000DF]">Developer Resources</span>
           </h1>
@@ -161,7 +161,7 @@ export default function Blogs() {
                   className="w-full h-[200px] object-cover rounded-md"
                 />
                 <p className="text-gray-400 text-xs mt-4">{article.date}</p>
-                <h3 className="font-serif text-lg font-bold text-gray-900 mt-1 leading-snug">
+                <h3 className="font-serif text-xs font-bold text-gray-900 mt-1 leading-snug flex justify-center">
                   {article.title}
                 </h3>
               </div>
@@ -177,7 +177,8 @@ export default function Blogs() {
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
               Subscribe for{" "}
               <span className="italic text-[#A000DF]">
-                Weekly Engineering Insights
+                Weekly Engineering
+                <br></br> Insights
               </span>
             </h2>
             <p className="mt-4 text-gray-500 text-sm leading-relaxed max-w-xl">

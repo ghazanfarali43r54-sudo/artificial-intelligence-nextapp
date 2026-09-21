@@ -63,7 +63,7 @@ const foundations = [
   {
     title: "Universal Security Frameworks",
     description:
-      "Every model is deployed inside secure Docker enclosures with TLS encryption at rest and in transit, strictly satisfying GDPR, SOC2, and HIPAA regulations.",
+      "Every model is deployed inside secure Docker enclosures with TLS encryption  at rest and in transit, strictly satisfying  SOC2, and HIPAA regulations.",
   },
   {
     title: "Continuous Pipeline Tuning",
@@ -85,7 +85,7 @@ export default function Industries() {
       {/* Hero Section */}
       <main className="min-h-[50vh] bg-gray-50 flex items-center justify-center px-6">
         <section className="max-w-4xl text-center py-24">
-          <h1 className="font-serif text-3xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
             AI Across <span className="text-[#A000DF]">Industries</span>{" "}
             Shaping the
             <br />
@@ -207,7 +207,7 @@ export default function Industries() {
                 <h3 className="font-serif text-lg font-semibold text-gray-900 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="text-gray-500 text-[13px] leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -219,7 +219,7 @@ export default function Industries() {
       {/* See How AI Transforms Section */}
       <section className="bg-gray-50 py-24 px-6">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="font-serif text-2xl md:text-4xl font-bold text-gray-900">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900">
             See How AI Transforms Your{" "}
             <span className="text-[#A000DF]">Industry</span>
           </h2>

@@ -87,7 +87,7 @@ export default function CaseStudies() {
       {/* Hero Section */}
       <section className="bg-gray-50 py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="font-serif text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
             Proven Performance &{" "}
             <span className="italic text-[#A000DF]">
               Measurable Real-World ROI
@@ -171,13 +171,13 @@ export default function CaseStudies() {
                   height={280}
                   className="w-full h-[220px] object-contain"
                 />
-                <p className="text-[#A000DF] text-xs font-semibold tracking-wide mt-5">
+                <p className="text-[#A000DF] text-xs font-semibold tracking-wide mt-2">
                   {card.tag}
                 </p>
-                <h3 className="font-serif text-lg font-bold text-gray-900 mt-1 leading-snug">
+                <h3 className="font-serif text-lg font-bold text-gray-900 mt-3 leading-snug">
                   {card.title}
                 </h3>
-                <p className="text-gray-500 text-sm mt-2 leading-relaxed">
+                <p className="text-gray-500 text-sm mt-3 leading-relaxed">
                   {card.description}
                 </p>
 

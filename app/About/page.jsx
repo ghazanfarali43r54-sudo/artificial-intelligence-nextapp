@@ -139,7 +139,7 @@ export default function About() {
       <section className="bg-gray-50 py-16 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+            <h2 className="font-serif text-2xl md:text-2xl font-bold text-gray-900 leading-tight">
               Founded In 2018, ClickMasters Set Out To{" "}
               <span className="italic text-[#A000DF]">
                 Democratize AI For Businesses Worldwide.
@@ -171,7 +171,7 @@ export default function About() {
       <section className="bg-gray-50 py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6 mb-16">
-            <h2 className="font-serif text-2xl md:text-4xl font-bold text-gray-900">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-gray-900">
               Our Core Vision And{" "}
               <span className="italic text-[#A000DF]">Foundational Values</span>
             </h2>
@@ -207,7 +207,7 @@ export default function About() {
               <span className="italic text-[#A000DF]">System Architects</span>
             </h2>
 
-            <p className="text-gray-400 text-sm md:text-right max-w-sm">
+            <p className="text-gray-400 text-md md:text-right max-w-sm">
               A multi-disciplinary team committed to engineering excellence,
               scalable databases, and private cloud pipelines.
             </p>
@@ -229,7 +229,7 @@ export default function About() {
                 <p className="text-[#A000DF] text-xs font-semibold tracking-wide mt-1">
                   {member.role}
                 </p>
-                <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+                <p className="text-gray-400 text-xs mt-2 leading-relaxed">
                   {member.bio}
                 </p>
               </div>
@@ -321,7 +321,7 @@ export default function About() {
             <span className="italic text-[#A000DF]">Pioneers</span>
           </h2>
 
-          <p className="mt-6 text-gray-500 text-sm md:text-base leading-relaxed">
+          <p className="mt-6 text-gray-500 text-sm md:text-sm leading-relaxed w-[550px] ml-16">
             We are always looking for visionary ML scientists, systems
             architects, and agile programmers. Explore our open positions and
             build future-ready systems.

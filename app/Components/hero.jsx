@@ -145,7 +145,7 @@ export default function Hero() {
         </div>
 
         {/* Right content block */}
-        <div className="flex flex-col items-end gap-6 w-[26%] max-w-[420px] shrink-0 lg:mr-[4%]">
+        <div className="flex flex-col items-end gap-6 w-[30%] max-w-[420px] shrink-0 lg:mr-[4%]">
           <p
             className="text-right text-[15px] leading-[20px] 2xl:text-base 2xl:leading-[22px]"
             style={{ fontFamily: "Urbanist, sans-serif", color: "#333333" }}

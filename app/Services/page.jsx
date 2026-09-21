@@ -264,7 +264,7 @@ export default function Services() {
                 <h3 className="font-serif text-base font-semibold text-gray-900 underline underline-offset-4 mb-6">
                   {stack.title}
                 </h3>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+                <div className="grid grid-cols-3 gap-x-1 gap-y-3">
                   {stack.items.map((item, i) => (
                     <span key={i} className="text-gray-600 text-sm">
                       {item}
