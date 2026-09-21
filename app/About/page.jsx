@@ -128,7 +128,7 @@ export default function About() {
           </p>
 
           <div className="mt-8">
-            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors">
+            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3  transition-colors">
               Get a free quote
             </button>
           </div>
@@ -328,7 +328,7 @@ export default function About() {
           </p>
 
           <div className="mt-8">
-            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors">
+            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3  transition-colors">
               View Open Positions
             </button>
           </div>

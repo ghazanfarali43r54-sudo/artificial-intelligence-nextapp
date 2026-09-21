@@ -153,7 +153,7 @@ export default function Services() {
           </p>
 
           <div className="mt-8">
-            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors">
+            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 transition-colors">
               Get a free quote
             </button>
           </div>
@@ -314,7 +314,7 @@ export default function Services() {
                 </ul>
 
                 <button
-                  className={`mt-8 w-full py-3 rounded-md text-sm font-medium transition-colors ${
+                  className={`mt-8 w-full py-3  text-sm font-medium transition-colors ${
                     plan.highlighted
                       ? "bg-[#A000DF] hover:bg-[#a000dfdf] text-white"
                       : "border border-gray-500 text-white hover:bg-gray-800"
@@ -342,7 +342,7 @@ export default function Services() {
           </p>
 
           <div className="mt-8">
-            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors">
+            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3  transition-colors">
               Get Started Today
             </button>
           </div>

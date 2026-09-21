@@ -91,7 +91,7 @@ export default function Blogs() {
                 alt="Digital network city visualization"
                 width={700}
                 height={450}
-                className="w-full h-auto object-cover rounded-md"
+                className="w-full h-auto object-contain"
               />
             </div>
 
@@ -116,7 +116,7 @@ export default function Blogs() {
                 alt="Digital network city visualization"
                 width={700}
                 height={450}
-                className="w-[40px] h-[40px] object-contain rounded-md"
+                className="w-[40px] h-[40px] object-contain "
               />
                   <div>
                     <p className="text-gray-900 text-sm font-semibold">
@@ -139,7 +139,7 @@ export default function Blogs() {
             {filters.map((filter, index) => (
               <button
                 key={index}
-                className={`text-sm px-4 py-2 rounded-md transition-colors ${
+                className={`text-sm px-4 py-2  transition-colors ${
                   index === 0
                     ? "bg-[#A000DF] text-white"
                     : "text-gray-600 hover:text-[#A000DF]"
@@ -158,7 +158,7 @@ export default function Blogs() {
                   alt={article.title}
                   width={500}
                   height={280}
-                  className="w-full h-[200px] object-cover rounded-md"
+                  className="w-full h-[200px] object-cover"
                 />
                 <p className="text-gray-400 text-xs mt-4">{article.date}</p>
                 <h3 className="font-serif text-xs font-bold text-gray-900 mt-1 leading-snug flex justify-center">
@@ -194,7 +194,7 @@ export default function Blogs() {
               placeholder="Enter your business email"
               className="border-b border-gray-300 focus:border-[#A000DF] outline-none py-2 text-sm text-gray-700 bg-transparent w-56"
             />
-            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors whitespace-nowrap">
+            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3  transition-colors whitespace-nowrap">
               Subscribe Now
             </button>
           </div>
@@ -247,7 +247,7 @@ export default function Blogs() {
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-6">
-            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors">
+            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3  transition-colors">
               Subscribe Now
             </button>
             

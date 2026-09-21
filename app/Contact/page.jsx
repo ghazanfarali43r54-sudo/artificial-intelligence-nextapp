@@ -261,7 +261,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-4 rounded-md transition-colors"
+                  className="w-full bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-4  transition-colors"
                 >
                   Send Message
                 </button>
@@ -440,7 +440,7 @@ export default function Contact() {
           </p>
 
           <div className="mt-8">
-            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors">
+            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3  transition-colors">
               Get Free Consultation
             </button>
           </div>

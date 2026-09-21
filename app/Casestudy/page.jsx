@@ -127,7 +127,7 @@ export default function CaseStudies() {
               </p>
 
               <div className="mt-6 flex items-center gap-6">
-                <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors">
+                <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3  transition-colors">
                   Read Full Case Study
                 </button>
 
@@ -150,7 +150,7 @@ export default function CaseStudies() {
             {filters.map((filter, index) => (
               <button
                 key={index}
-                className={`text-sm px-4 py-2 rounded-md transition-colors ${
+                className={`text-sm px-4 py-2 transition-colors ${
                   index === 0
                     ? "bg-[#A000DF] text-white"
                     : "text-gray-600 hover:text-[#A000DF]"
@@ -252,7 +252,7 @@ export default function CaseStudies() {
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-6">
-            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors">
+            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3  transition-colors">
               Discuss Your Project
             </button>
 

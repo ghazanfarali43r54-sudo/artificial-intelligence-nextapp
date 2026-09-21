@@ -106,7 +106,7 @@ export default function Locations() {
               </div>
 
               <div className="mt-6">
-                <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors">
+                <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3  transition-colors">
                   Book a Visit
                 </button>
               </div>
@@ -236,7 +236,7 @@ export default function Locations() {
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-6">
-            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3 rounded-md transition-colors">
+            <button className="bg-[#A000DF] hover:bg-[#a000dfdf] text-white text-sm font-medium px-6 py-3  transition-colors">
               Get Free Consultation
             </button>
             
