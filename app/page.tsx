@@ -1,5 +1,5 @@
 import Hero from "./Components/hero";
-import Navbar from "./Components/Navbar";
+// import Navbar from "./Components/Navbar";
 import ServicesStrip from "./Components/ServicesStrip";
 import ProvenTrackRecord from "./Components/ProvenTrackRecord";
 import WhyClickmasters from "./Components/WhyClickmasters";
@@ -9,7 +9,7 @@ import Proven from "./Components/Proven";
 import Explore from "./Components/Explore";
 import TechStackGrid from "./Components/TechStackGrid";
 import CTASection from "./Components/CTASection";
-import Article from "./Components/Article";
+import Article from "./Components/Article"; 
 import Testimonials from "./Components/Testimonials";
 import SectorsWeServe from "./Components/SectorsWeServe";
 import Answer from "./Components/Answer";
@@ -18,7 +18,7 @@ import Footer from "./Components/Footer";
 function Home() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <ServicesStrip />
       <ProvenTrackRecord />

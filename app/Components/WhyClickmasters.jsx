@@ -112,7 +112,7 @@ export default function WhyClickmasters() {
         </div>
 
         {/* Right scattered cards — stacked grid on mobile/tablet, scattered on desktop */}
-        <div className="relative grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:block lg:h-[480px]">
+        <div className="relative grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:block lg:h-[480px] lg:w-full lg:max-w-[460px] lg:mx-auto">
           {cards.map((card) => (
             <div
               key={card.title}

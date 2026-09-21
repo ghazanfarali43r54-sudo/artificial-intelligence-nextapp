@@ -1,30 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { logo } from "../assets";
 
-// Har link ka label + jis section pe jana hai uska anchor id
-// Ye ids homepage ke sections pe lagayi gayi hain (same page scroll)
+// Har link ka label + uska dedicated page route
 const navLinks = [
-  { label: "Hero", target: "hero" },
-  { label: "ServicesStrip", target: "services-strip" },
-  { label: "ProvenTrack", target: "proven-track" },
-  { label: "Clients", target: "clients" },
-  { label: "TechStack", target: "tech-stack" },
-  { label: "proven", target: "proven" },
-  { label: "Explore", target: "explore" },
-  { label: "Testimonial", target: "testimonial" },
-  { label: "Article", target: "article" },
+  { label: "Solutions", href: "/Solutions" },
+  { label: "Services", href: "/Services" },
+  { label: "Industries", href: "/Industries" },
+  { label: "Case-Studies", href: "/Casestudy" },
+  { label: "locations", href: "/Location" },
+  { label: "About-US", href: "/About" },
+  { label: "Contact-US", href: "/Contact" },
+  { label: "Blogs", href: "/Blogs" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState(null);
+  const pathname = usePathname();
 
-  // Click hone pe active link set karo aur mobile menu band kar do
-  const handleClick = (target) => {
-    setActive(target);
+  // Click hone pe mobile menu band kar do
+  const handleClick = () => {
     setOpen(false);
   };
 
@@ -52,19 +50,19 @@ export default function Navbar() {
 
       {open && (
         <div className="lg:hidden flex flex-col items-center gap-4 pb-6 px-6">
-          {navLinks.map(({ label, target }) => (
-            <a
+          {navLinks.map(({ label, href }) => (
+            <Link
               key={label}
-              href={`#${target}`}
-              onClick={() => handleClick(target)}
+              href={href}
+              onClick={handleClick}
               className={`text-sm transition-colors ${
-                active === target
+                pathname === href
                   ? "text-purple-600 font-semibold"
                   : "text-gray-800 hover:text-purple-600"
               }`}
             >
               {label}
-            </a>
+            </Link>
           ))}
           <Link
             href="/signin"
@@ -81,19 +79,19 @@ export default function Navbar() {
         </Link>
 
         <ul className="flex flex-row justify-center items-center gap-6 flex-1">
-          {navLinks.map(({ label, target }) => (
+          {navLinks.map(({ label, href }) => (
             <li key={label}>
-              <a
-                href={`#${target}`}
-                onClick={() => handleClick(target)}
+              <Link
+                href={href}
+                onClick={handleClick}
                 className={`text-sm transition-colors whitespace-nowrap ${
-                  active === target
+                  pathname === href
                     ? "text-purple-600 font-semibold"
                     : "text-gray-800 hover:text-purple-600"
                 }`}
               >
                 {label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
