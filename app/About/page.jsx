@@ -337,24 +337,7 @@ export default function About() {
 
       {/* Footer */}
       <footer className="relative w-full max-w-[1728px] mx-auto bg-white overflow-hidden lg:h-[687px] py-16 lg:py-0 px-6">
-        <h2
-          className="hidden text-transparent [-webkit-text-stroke:2px_#AF00E8] lg:block absolute font-bold uppercase whitespace-nowrap select-none pointer-events-none z-0"
-          style={{
-            fontFamily: "Outfit, sans-serif",
-            bottom: "-39.01px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            fontSize: "12.6vw",
-            lineHeight: "16.55vw",
-            opacity: 0.1,
-            WebkitMaskImage:
-              "linear-gradient(to bottom, black 40%, transparent 90%)",
-            maskImage: "linear-gradient(to bottom, black 40%, transparent 90%)",
-          }}
-        >
-          Clickmasters
-        </h2>
-
+        
         <div className="relative z-10 flex flex-col items-center gap-[60px] w-full lg:max-w-[1528px] lg:mx-auto lg:pt-[100.71px]">
           <img
             src={logo}
